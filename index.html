@@ -15,17 +15,17 @@
     .wrap{max-width:var(--maxwidth);margin:36px auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;gap:16px;align-items:center}
-    .avatar{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:800}
+    .avatar{width:72px;height:72px;border-radius:12px;object-fit: cover;box-shadow: 0 0 8px rgba(0,0,0,0.3);}
     nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:600}
     main{display:grid;grid-template-columns:320px 1fr;gap:28px;margin-top:28px}
-    /* left column */
+
     .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
     .name{font-size:20px;font-weight:800;margin:6px 0}
     .role{color:var(--muted);font-size:13px;margin-bottom:12px}
     .info p{margin:8px 0;color:var(--muted);font-size:14px}
     .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
     .chip{background:var(--glass);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
-    /* right column */
+
     .hero{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px}
     .intro{display:flex;align-items:center;justify-content:space-between}
     .intro h1{margin:0;font-size:26px}
@@ -37,9 +37,8 @@
     .project{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);min-height:110px;display:flex;flex-direction:column;justify-content:space-between}
     .proj-title{font-weight:700}
     footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
-    /* responsive */
+
     @media (max-width:900px){main{grid-template-columns:1fr;}.brand .avatar{width:56px;height:56px}.wrap{margin:18px;padding:16px}}
-    /* small utilities */
     .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#2563eb);color:white;font-weight:700;text-decoration:none}
     .meta{color:var(--muted);font-size:13px}
     .download{margin-top:10px}
@@ -50,7 +49,7 @@
   <div class="wrap">
     <header>
       <div class="brand">
-        <div class="avatar">PN</div>
+        <img src="Photo_CV.jpg" alt="Photo de Baptiste GEFFRAY" class="avatar-img">
         <div>
           <div class="name">Baptiste Geffray</div>
           <div class="role">Étudiant · Développeur ·</div>
