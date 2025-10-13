@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Baptiste Geffray — CV & Projets</title>
+  <meta name="description" content="Portfolio / CV de Baptiste Geffray — projets réalisés pendant les études, expériences et contact." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#7c3aed;--glass: rgba(255,255,255,0.04);--maxwidth:1100px}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071028 0%, #081426 60%);font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef8}
+    a{color:inherit}
+    .wrap{max-width:var(--maxwidth);margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:800}
+    nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:600}
+    main{display:grid;grid-template-columns:320px 1fr;gap:28px;margin-top:28px}
+    /* left column */
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .name{font-size:20px;font-weight:800;margin:6px 0}
+    .role{color:var(--muted);font-size:13px;margin-bottom:12px}
+    .info p{margin:8px 0;color:var(--muted);font-size:14px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chip{background:var(--glass);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+    /* right column */
+    .hero{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px}
+    .intro{display:flex;align-items:center;justify-content:space-between}
+    .intro h1{margin:0;font-size:26px}
+    .intro p{margin:0;color:var(--muted)}
+    .cv-section{margin-top:18px}
+    .section-title{font-weight:700;margin-bottom:8px}
+    .job{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);margin-bottom:10px}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:12px}
+    .project{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);min-height:110px;display:flex;flex-direction:column;justify-content:space-between}
+    .proj-title{font-weight:700}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+    /* responsive */
+    @media (max-width:900px){main{grid-template-columns:1fr;}.brand .avatar{width:56px;height:56px}.wrap{margin:18px;padding:16px}}
+    /* small utilities */
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#2563eb);color:white;font-weight:700;text-decoration:none}
+    .meta{color:var(--muted);font-size:13px}
+    .download{margin-top:10px}
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">PN</div>
+        <div>
+          <div class="name">Baptiste Geffray</div>
+          <div class="role">Étudiant · Développeur ·</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">À propos</a>
+        <a href="#cv">CV</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- colonne gauche -->
+      <aside class="card">
+        <h3>Contact</h3>
+        <div class="info">
+          <p class="meta">📍 Ville, Pays</p>
+          <p class="meta">✉️ <a href="mailto:baptiste.geffray.&@etu.u-bordeaux.fr">baptiste.geffray.&@etu.u-bordeaux.fr</a></p>
+          <p class="meta">🔗  · <a href="https://github.com/bageff">GitHub</a></p>
+        </div>
+
+        <div style="margin-top:14px">
+          <h4>Compétences</h4>
+          <div class="skills">
+            <span class="chip">C </span>
+            <span class="chip">Python</span>
+            <span class="chip">HTML/CSS</span>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <h4>Télécharger</h4>
+          <div class="download"><a class="btn" href="CV_Baptiste_GEFFRAY.pdf">Télécharger CV (PDF)</a></div>
+        </div>
+      </aside>
+
+      <!-- colonne droite -->
+      <section>
+        <div id="about" class="card hero">
+          <div class="intro">
+            <div>
+              <h1>Bonjour — je suis Baptiste</h1>
+              <p class="meta">Étudiant en Master ASPIC à l'Université de Bordeaux. Passionné par la robotique et les systèmes autonomes en général.</p>
+            </div>
+            <div>
+              <a class="btn" href="#projects">Voir mes projets</a>
+            </div>
+          </div>
+
+          <div class="cv-section" id="cv">
+            <h3 class="section-title">Expériences & Formation</h3>
+            <div class="job">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div style="font-weight:700">License Informatique puis Master </div>
+                  <div class="meta">2021 — 2025</div>
+                </div>
+                <div class="meta">Université de Bordeaux</div>
+              </div>
+              <p class="meta" style="margin-top:8px">Modules clés: Algorithmique, Réseau, Robotique, Traitement d'image.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="projects" class="card" style="margin-top:16px">
+          <h3 class="section-title">Projets sélectionnés</h3>
+          <div class="projects-grid">
+            <article class="project">
+              <div>
+                <div class="proj-title">Life (simulateur optimisé)</div>
+                <div class="meta">AVX2, MPI — optimisation d'un noyau de simulation</div>
+              </div>
+              <div style="margin-top:10px"><a href="#" class="meta">Voir le code →</a></div>
+            </article>
+
+            <article class="project">
+              <div>
+                <div class="proj-title">Mini OS / Projet système</div>
+                <div class="meta">C, bas-niveau — bootloader et gestion mémoire</div>
+              </div>
+              <div style="margin-top:10px"><a href="#" class="meta">Repo →</a></div>
+            </article>
+
+          </div>
+        </div>
+
+        <div id="contact" class="card" style="margin-top:16px">
+          <h3 class="section-title">Contact</h3>
+          <p class="meta">Pour me contacter</p>
+          <div class="contact-list" style="margin-top:12px">
+            <a class="btn" href="mailto:baptiste.geffray.1@etu.u-bordeaux.fr">Envoyer un email</a>
+            <a class="meta" href="#">LinkedIn</a>
+            <a class="meta" href="#">GitHub</a>
+          </div>
+        </div>
+
+        <footer>
+          © <span id="year"></span> Baptiste Geffray — CV & Portfolio
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // simple small script: insert year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
