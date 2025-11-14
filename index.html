@@ -15,17 +15,17 @@
     .wrap{max-width:var(--maxwidth);margin:36px auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;gap:16px;align-items:center}
-    .avatar{width:72px;height:72px;border-radius:12px;object-fit: cover;box-shadow: 0 0 8px rgba(0,0,0,0.3);}
+    .avatar{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:800}
     nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:600}
     main{display:grid;grid-template-columns:320px 1fr;gap:28px;margin-top:28px}
-
+    /* left column */
     .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
     .name{font-size:20px;font-weight:800;margin:6px 0}
     .role{color:var(--muted);font-size:13px;margin-bottom:12px}
     .info p{margin:8px 0;color:var(--muted);font-size:14px}
     .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
     .chip{background:var(--glass);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
-
+    /* right column */
     .hero{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px}
     .intro{display:flex;align-items:center;justify-content:space-between}
     .intro h1{margin:0;font-size:26px}
@@ -37,8 +37,9 @@
     .project{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);min-height:110px;display:flex;flex-direction:column;justify-content:space-between}
     .proj-title{font-weight:700}
     footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
-
+    /* responsive */
     @media (max-width:900px){main{grid-template-columns:1fr;}.brand .avatar{width:56px;height:56px}.wrap{margin:18px;padding:16px}}
+    /* small utilities */
     .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#2563eb);color:white;font-weight:700;text-decoration:none}
     .meta{color:var(--muted);font-size:13px}
     .download{margin-top:10px}
@@ -49,18 +50,12 @@
   <div class="wrap">
     <header>
       <div class="brand">
-        <img src="cv_photo.jpg" alt="Photo de Baptiste GEFFRAY" class="avatar-img">
+        <div class="avatar">PN</div>
         <div>
           <div class="name">Baptiste Geffray</div>
           <div class="role">Étudiant · Développeur ·</div>
         </div>
       </div>
-      <nav>
-        <a href="#about">À propos</a>
-        <a href="#cv">CV</a>
-        <a href="#projects">Projets</a>
-        <a href="#contact">Contact</a>
-      </nav>
     </header>
 
     <main>
@@ -68,7 +63,7 @@
       <aside class="card">
         <h3>Contact</h3>
         <div class="info">
-          <p class="meta">📍 Ville, Pays</p>
+          <p class="meta">📍 Saint Médard En Jalles, France</p>
           <p class="meta">✉️ <a href="mailto:baptiste.geffray.&@etu.u-bordeaux.fr">baptiste.geffray.&@etu.u-bordeaux.fr</a></p>
           <p class="meta">🔗  · <a href="https://github.com/bageff">GitHub</a></p>
         </div>
@@ -79,6 +74,9 @@
             <span class="chip">C </span>
             <span class="chip">Python</span>
             <span class="chip">HTML/CSS</span>
+            <span class="chip">Java</span>
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">ROS2</span>
           </div>
         </div>
 
@@ -96,9 +94,6 @@
               <h1>Bonjour — je suis Baptiste</h1>
               <p class="meta">Étudiant en Master ASPIC à l'Université de Bordeaux. Passionné par la robotique et les systèmes autonomes en général.</p>
             </div>
-            <div>
-              <a class="btn" href="#projects">Voir mes projets</a>
-            </div>
           </div>
 
           <div class="cv-section" id="cv">
@@ -106,8 +101,18 @@
             <div class="job">
               <div style="display:flex;justify-content:space-between;align-items:center">
                 <div>
-                  <div style="font-weight:700">License Informatique puis Master </div>
-                  <div class="meta">2021 — 2025</div>
+                  <div style="font-weight:700">License Informatique</div>
+                  <div class="meta">2019 — 2023</div>
+                </div>
+                <div class="meta">Université de Bordeaux</div>
+              </div>
+              <p class="meta" style="margin-top:8px">Modules clés: Algorithmique, Réseau, Robotique, Traitement d'image.</p>
+            </div>
+             <div class="job">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div style="font-weight:700">Master Informatique</div>
+                  <div class="meta">2023 — 2026</div>
                 </div>
                 <div class="meta">Université de Bordeaux</div>
               </div>
@@ -121,12 +126,16 @@
           <div class="projects-grid">
             <article class="project">
               <div>
-                <div class="proj-title">Life (simulateur optimisé)</div>
-                <div class="meta">AVX2, MPI — optimisation d'un noyau de simulation</div>
+                <div class="proj-title">Jeu de la Vie (simulateur optimisé)</div>
+                <div class="meta">Parallélisation et optimisation d'un noyau de simulation à l'aide de OpenMP ( AVX , MPI ) </div>
               </div>
-              <div style="margin-top:10px"><a href="#" class="meta">Voir le code →</a></div>
             </article>
-
+            <article class="project">
+              <div>
+                <div class="proj-title">Jeu des Amazones</div>
+                <div class="meta">Réalisation d'un projet de programmation  du jeu des Amazones </div>
+              </div>
+            </article>
             <article class="project">
               <div>
                 <div class="proj-title">Mini OS / Projet système</div>
